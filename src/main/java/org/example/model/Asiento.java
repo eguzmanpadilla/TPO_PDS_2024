@@ -1,22 +1,19 @@
 package org.example.model;
 
 public class Asiento {
-    private int asiento;
+    private int id_asiento;
     private Zona zona;
-    private Funcion funcion;
     private int cantidadEntradas;
 
-    public Asiento(int asiento,
+    public Asiento(int id_asiento,
                    Zona zona,
-                   Funcion funcion,
                    int cantidadEntradas) {
-        this.asiento = asiento;
+        this.id_asiento = id_asiento;
         this.zona = zona;
-        this.funcion = funcion;
         this.cantidadEntradas = cantidadEntradas;
     }
 
-    public double getPrecio(Zona zona) {
-
+    public double getPrecio() {
+        return this.zona.getPrecio();
     }
 }

@@ -1,13 +1,7 @@
 
-8
-java:S1700"Rename field "asiento"(ëƒ³çÿÿÿÿÿ8ô•ÙÄ±2
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚Ô£‚ıÿÿÿÿ8õ•ÙÄ±2
-M
-java:S1068"+Remove this unused "asiento" private field.(ëƒ³çÿÿÿÿÿ8÷•ÙÄ±2
-E
-java:S1068"(Remove this unused "zona" private field.(õìÆµ8÷•ÙÄ±2
-M
-java:S1068"+Remove this unused "funcion" private field.(Ïİİëúÿÿÿÿ8÷•ÙÄ±2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãò‡Ã8ßó—Š²2
+p	java:S116"URename this field "id_asiento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èëù-8÷¼–Š²2
+J
+java:S1068".Remove this unused "id_asiento" private field.(Èëù-8ù¼–Š²2
 V
-java:S1068"4Remove this unused "cantidadEntradas" private field.(å‚ŸÔúÿÿÿÿ8÷•ÙÄ±2
+java:S1068"4Remove this unused "cantidadEntradas" private field.(å‚ŸÔúÿÿÿÿ8ù¼–Š²2

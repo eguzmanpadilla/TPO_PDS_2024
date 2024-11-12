@@ -1,16 +1,12 @@
 
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•­Æê8ƒËÆµ±2
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ç î´8„ËÆµ±2
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ßÂŸ¡şÿÿÿÿ8„ËÆµ±2
 L
-java:S1068"*Remove this unused "nombre" private field.(µÿï„ùÿÿÿÿ8‡ËÆµ±2
+java:S1068"*Remove this unused "nombre" private field.(µÿï„ùÿÿÿÿ8ÀÙ²Œ²2
 I
-java:S1068	",Remove this unused "apellido" private field.(åÔĞÁ8‡ËÆµ±2
+java:S1068	",Remove this unused "apellido" private field.(åÔĞÁ8ÀÙ²Œ²2
 K
 java:S1068
-")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ8‡ËÆµ±2
+")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ8ÀÙ²Œ²2
+R
+java:S1068"0Remove this unused "hashPassword" private field.(´ÃË´øÿÿÿÿ8ÀÙ²Œ²2
 H
-java:S1068"+Remove this unused "compras" private field.(áìÙê8‡ËÆµ±2
+java:S1068"+Remove this unused "compras" private field.(áìÙê8ÀÙ²Œ²2

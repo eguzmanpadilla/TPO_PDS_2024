@@ -4,20 +4,20 @@ import java.util.List;
 
 public class Compra {
 
-    private List<Funcion> funciones;
-    private List<Asiento> lugaresSeleccionados;
-    private MedioDePago medioDePago;
+    private List<Entrada> entradas;
 
-    public Compra(List<Funcion> funciones,
-                  List<Asiento> lugaresSeleccionados,
-                  MedioDePago medioDePago) {
-        this.funciones = funciones;
-        this.lugaresSeleccionados = lugaresSeleccionados;
-        this.medioDePago = medioDePago;
+    public Compra(List<Entrada> entradas) {
+        this.entradas = entradas;
     }
 
     public double calcularTotal() {
-
+        double total = 0;
+        for (Entrada entrada : entradas) {
+            double base = entrada.funcion().getPrecioXFuncion() + entrada.asiento().getPrecio();
+            double modif = entrada.medioDePago().calcularMontoFinal(base);
+            total = total + modif;
+        }
+        return total;
     }
 
 }
