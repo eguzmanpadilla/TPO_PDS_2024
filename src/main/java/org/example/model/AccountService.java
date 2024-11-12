@@ -1,13 +1,23 @@
 package org.example.model;
 
+import java.lang.classfile.ClassFile;
 import java.util.List;
+import java.util.Optional;
+import java.util.ArrayList;
 
 public class AccountService {
+
+  private Optional<Cliente> clienteActual;
 
     String ADMIN_USERNAME = "Admin123";
     String ADMIN_PASSWORD = "1234";
 
     private List<Cliente> clientes;
+
+    public AccountService() {
+        this.clienteActual = Optional.empty();
+        this.clientes = new ArrayList<>();
+    }
 
     public boolean registrarCliente(String nombre, String apellido, String email, String contraseña) {
       for (Cliente cliente : clientes) {
@@ -24,8 +34,10 @@ public class AccountService {
   }
 
   public boolean iniciarSesion(String email, String contraseña) {
+      Optional<Cliente> clienteActual = Optional.empty();
       for (Cliente cliente : clientes) {
           if (cliente.getEmail().equals(email) && cliente.getContraseña().equals(contraseña)) {
+              this.clienteActual = Optional.of(cliente);
               System.out.println("Inicio de sesión exitoso para: " + cliente.getNombre() + " " + cliente.getApellido());
               return true;
           }
