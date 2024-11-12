@@ -12,26 +12,28 @@ public class Teatro {
     private String nombre;
     private String direccion;
 
+    private AccountService accountService;
     private List<Grupo> grupos;
     private List<Funcion> funciones;
-    private List<Cliente> clientes;
+    private List<Asiento> asientos;
 
     public Teatro() {
         this.nombre = "Colonial";
         this.direccion = "Av. Bartolomé Mitre 141, Avellaneda, Provincia de Buenos Aires";
+        this.accountService = new AccountService();
         this.funciones = new ArrayList<>();
-        this.clientes = new ArrayList<>();
         this.grupos = new ArrayList<>();
+        this.asientos = new ArrayList<>();
     }
 
     public boolean cargarFuncion(String titulo, Date fecha, int duracionMin, Grupo grupo) {
         for(Funcion funcion : funciones) {
-            if(funcion.getTitulo() != titulo && !funcion.getFecha().equals(fecha)) {
+            if(funcion.getTitulo() == titulo || funcion.getFecha().equals(fecha)) {
                 return false;
             }
         }
-        funciones.add(new Funcion(titulo, fecha, duracionMin, grupo, ))
-
+        funciones.add(new Funcion(titulo, fecha, duracionMin, grupo));
+        return true;
     }
 
     public boolean cargarGrupo(Grupo grupoCandidato ) {
@@ -44,10 +46,10 @@ public class Teatro {
         return true;
     }
 
-    public void registrarCliente(Cliente cliente) {
 
-    }
+
+
     public List<Cliente> getClientes() {
-        return new ArrayList<>(clientes);
+        return  this.accountService.getClientes();
     }
 }

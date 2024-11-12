@@ -61,3 +61,9 @@ c
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+i
+9src/main/java/org/example/request/MedioDePagoRequest.java,0\2\02ad3096e983a9a5321795f58342f487d398ae88
+_
+/src/main/java/org/example/model/ZonaPrecio.java,f\7\f757d988ec71273a68bce08a860ac12c8345af2b
+c
+3src/main/java/org/example/model/AccountService.java,6\2\626a75bbff0b78964b748f68333f68f76d52fbfe

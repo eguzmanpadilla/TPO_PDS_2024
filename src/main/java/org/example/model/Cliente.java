@@ -21,16 +21,8 @@ public class Cliente {
         this.compras = compras;
     }
 
-    public boolean registrar() {
-
-    }
-
-    public boolean login() {
-
-    }
-
     public void realizarCompra(List <DataRequest> funciones, List<Asiento> lugares, MedioDePago medioDePago) {
-
+        // todavia a modificar
     }
 
 }

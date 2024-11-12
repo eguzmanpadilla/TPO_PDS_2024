@@ -10,22 +10,21 @@ public class Funcion {
     private Date fecha;
     private int duracionMin;
     private Grupo grupo;
-    private List<Asiento> asientos;
 
-    public Funcion(String titulo, Date fecha, int duracionMin, Grupo grupo, List<Asiento> asientos) {
+
+    public Funcion(String titulo, Date fecha, int duracionMin, Grupo grupo) {
         this.titulo = titulo;
         this.fecha = fecha;
         this.duracionMin = duracionMin;
         this.grupo = grupo;
-        this.asientos = asientos;
     }
 
-    public double getPrecioFuncion() {
-
+    public double getPrecioXFuncion() {
+        return duracionMin*140;
     }
-
-    public boolean isDisponible() {}
-    public void reservarLugar(Zona zona, int cantidad) {}
+    public void reservarLugar(Zona zona, int cantidad) {
+        //falta definir logica
+    }
 
 
     public String getTitulo() {
@@ -39,4 +38,4 @@ public class Funcion {
 
 
 
-}
+

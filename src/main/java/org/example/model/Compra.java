@@ -11,7 +11,13 @@ public class Compra {
     }
 
     public double calcularTotal() {
-
+        double total = 0;
+        for (Entrada entrada : entradas) {
+            double base = entrada.funcion().getPrecioXFuncion() + entrada.asiento().getPrecio();
+            double modif = entrada.medioDePago().calcularMontoFinal(base);
+            total = total + modif;
+        }
+        return total;
     }
 
 }

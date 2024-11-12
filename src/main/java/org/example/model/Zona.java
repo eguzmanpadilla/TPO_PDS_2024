@@ -7,17 +7,19 @@ public class Zona {
     private int capacidadMaxima;
 
     public boolean isDisponible(Funcion funcion, int cantSolicitada) {
-
+        return true;
     }
 
-    public getDisponibleActual(Funcion funcion) {
-
+    public void getDisponibleActual(Funcion funcion) {
+        //todavia falta definir logica
     }
 
     public void reservarLugares(Funcion funcion, int cantidad) {
+        //falta definir logica
 
     }
     public void liberarLugares(Funcion funcion, int cantidad) {
+        //falte definir logica
 
     }
 

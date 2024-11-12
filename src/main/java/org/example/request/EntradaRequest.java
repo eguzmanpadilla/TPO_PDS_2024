@@ -4,8 +4,10 @@ import org.example.model.Asiento;
 import org.example.model.Funcion;
 import org.example.model.MedioDePago;
 
-public record EntradaRequest(Funcion funcion,
-                             Asiento asiento,
+import java.util.Date;
+
+public record EntradaRequest(String titulo,
+                             Date fecha,
                              MedioDePago medioDePago) {
 
 

@@ -18,16 +18,14 @@ public class Controlador {
     }
 
     public boolean cargarFuncion(FuncionRequest funcionRequest) {
-        return this.teatro.cargarFuncion(funcionRequest.titulo(), funcionRequest.fecha(), funcionRequest.duracionMin(), funcionRequest.grupo())
+        return this.teatro.cargarFuncion(funcionRequest.titulo(), funcionRequest.fecha(), funcionRequest.duracionMin(), funcionRequest.grupo());
     }
 
     public boolean cargarGrupo(String nombreGrupo, List<ActorRequest> actorRequestList) {
         return this.teatro.cargarGrupo(mapGrupo(nombreGrupo, actorRequestList));
     }
 
-    public costoUbicacion() {
 
-    }
 
     private Grupo mapGrupo(String nombreGrupo, List<ActorRequest> actorRequestList) {
         List<Actor> actoresCandidatos = new ArrayList<>();

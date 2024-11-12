@@ -13,7 +13,7 @@ public class Asiento {
         this.cantidadEntradas = cantidadEntradas;
     }
 
-    public double getPrecio(Zona zona) {
+    public double getPrecio() {
         return this.zona.getPrecio();
     }
 }
