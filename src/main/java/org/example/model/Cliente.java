@@ -1,6 +1,6 @@
 package org.example.model;
 
-import org.example.model.dataModel.DataFuncion;
+import org.example.request.DataRequest;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String email;
+    private int hashPassword;
     private List<Compra> compras;
 
     public Cliente(String nombre,
@@ -28,7 +29,7 @@ public class Cliente {
 
     }
 
-    public void realizarCompra(List <DataFuncion> funciones, List<LugarSeleccionado> lugares, MedioDePago medioDePago) {
+    public void realizarCompra(List <DataRequest> funciones, List<Asiento> lugares, MedioDePago medioDePago) {
 
     }
 

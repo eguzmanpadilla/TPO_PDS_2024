@@ -20,4 +20,16 @@ public class Zona {
     public void liberarLugares(Funcion funcion, int cantidad) {
 
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
 }

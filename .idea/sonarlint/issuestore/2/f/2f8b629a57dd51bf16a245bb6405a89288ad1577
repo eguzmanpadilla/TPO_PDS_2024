@@ -1,9 +1,5 @@
 
 £
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñŸÒşûÿÿÿÿ8èêÜÄ±2
-O
-java:S1068"-Remove this unused "funciones" private field.(ÃŸÂ–ùÿÿÿÿ8êêÜÄ±2
-Z
-java:S1068"8Remove this unused "lugaresSeleccionados" private field.(²ÅåÃùÿÿÿÿ8êêÜÄ±2
-L
-java:S1068	"/Remove this unused "medioDePago" private field.(»„†ö8êêÜÄ±2
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñŸÒşûÿÿÿÿ8®”ï±2
+H
+java:S1068",Remove this unused "entradas" private field.(¯¤Š"8¯”ï±2
