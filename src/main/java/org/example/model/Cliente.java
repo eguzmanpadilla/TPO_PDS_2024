@@ -2,6 +2,7 @@ package org.example.model;
 
 import org.example.model.dataModel.DataFuncion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
@@ -10,26 +11,40 @@ public class Cliente {
     private String email;
     private List<Compra> compras;
 
-    public Cliente(String nombre,
-                   String apellido,
-                   String email,
-                   List<Compra> compras) {
+    public Cliente(String nombre, String apellido, String email, List<Compra> compras) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
-        this.compras = compras;
+        this.compras = new ArrayList<>();
     }
 
-    public boolean registrar() {
-
+    public void registrar() { // ver como implementar el registro
+      System.out.println("Cliente registrado: " + nombre + " " + apellido);
     }
 
-    public boolean login() {
-
+    public void login() {
+      System.out.println("Cliente logueado: " + nombre + " " + apellido);
     }
 
     public void realizarCompra(List <DataFuncion> funciones, List<LugarSeleccionado> lugares, MedioDePago medioDePago) {
-
+      Compra compra = new Compra(funciones, lugares, medioDePago);
+      compras.add(compra);
+      System.out.println("Compra realizada por: " + nombre + " " + apellido);
     }
 
+    public String getNombre() {
+      return nombre;
+  }
+
+  public String getApellido() {
+      return apellido;
+  }
+
+  public String getEmail() {
+      return email;
+  }
+
+  public List<Compra> getCompras() {
+      return List.copyOf(compras);
+  }
 }

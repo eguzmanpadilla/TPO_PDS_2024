@@ -6,6 +6,12 @@ public class Zona {
     private double precio;
     private int capacidadMaxima;
 
+    public Zona(String nombre, double precio, int capacidadMaxima) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.capacidadMaxima = capacidadMaxima;
+    }
+
     public boolean isDisponible(Funcion funcion, int cantSolicitada) {
 
     }
