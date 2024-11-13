@@ -34,7 +34,4 @@ public class Controlador {
         }
         return new Grupo(nombreGrupo, actoresCandidatos);
     }
-
-
-
 }
