@@ -4,18 +4,18 @@ public class Zona {
 
     private String nombre;
     private double precio;
-    private int capacidadMaxima = 30;
+    private int capacidadMaxima;
     private int asientosOcupados;
 
     public Zona(String nombre, double precio, int capacidadMaxima, int asientosOcupados) {
         this.nombre = nombre;
         this.precio = precio;
-        this.capacidadMaxima = capacidadMaxima;
+        this.capacidadMaxima = 0;
         this.asientosOcupados = 0;
     }
 
     public boolean isDisponible(Funcion funcion) {
-        return asientosOcupados < 30;
+        return asientosOcupados < capacidadMaxima;
     }
 
     public void getDisponibleActual(Funcion funcion) {
@@ -36,15 +36,19 @@ public class Zona {
       }
     }
     
+    public int getCapacidadMaxima() {
+      return capacidadMaxima;
+  }
+
+    public void setCapacidadMaxima(int capacidadMaxima) {
+      this.capacidadMaxima = capacidadMaxima;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public double getPrecio() {
         return precio;
-    }
-
-    public int getCapacidadMaxima() {
-        return capacidadMaxima;
     }
 }
