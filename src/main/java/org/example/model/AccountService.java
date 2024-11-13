@@ -6,32 +6,49 @@ import java.util.Optional;
 
 public class AccountService {
 
-    private Optional<Cliente> clienteActual;
+  private Optional<Cliente> clienteActual;
+
     String ADMIN_USERNAME = "Admin123";
     String ADMIN_PASSWORD = "1234";
+
     private List<Cliente> clientes;
+
     public AccountService() {
         this.clienteActual = Optional.empty();
         this.clientes = new ArrayList<>();
     }
 
-    public boolean registrar(String nombre, String apellido, String email, String contraseña) {
-        return true;
-    }
+    public boolean registrarCliente(String nombre, String apellido, String email, String contraseña) {
+      for (Cliente cliente : clientes) {
+          if (cliente.getEmail().equals(email)) {
+              System.out.println("El cliente ya está registrado con ese email.");
+              return false;
+          }
+      }
 
-    public boolean iniciarSesion(String email, String contraseña) {
+      Cliente nuevoCliente = new Cliente(nombre, apellido, email, contraseña);
+      clientes.add(nuevoCliente);
+      System.out.println("Cliente registrado exitosamente: " + nombre + " " + apellido);
+      return true;
+  }
 
+  public boolean iniciarSesion(String email, String contraseña) {
+      Optional<Cliente> clienteActual = Optional.empty();
+      for (Cliente cliente : clientes) {
+          if (cliente.getEmail().equals(email) && cliente.getContraseña().equals(contraseña)) {
+              this.clienteActual = Optional.of(cliente);
+              System.out.println("Inicio de sesión exitoso para: " + cliente.getNombre() + " " + cliente.getApellido());
+              return true;
+          }
+      }
+      System.out.println("Email o contraseña incorrectos.");
+      return false;
+  }
 
-
-        this.clienteActual = Optional.of(actualCliente);
-        return true;
-    }
-
+  public List<Cliente> getClientes() {
+      return List.copyOf(clientes);
+  }
     public Cliente getClienteActual() {
         return this.clienteActual.get();
-    }
-
-    public List<Cliente> getClientes() {
-        return clientes;
     }
 }

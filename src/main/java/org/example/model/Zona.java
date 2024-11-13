@@ -4,6 +4,7 @@ public class Zona {
 
    private ZonaPrecio zonaPrecio;
     private int capacidadMaxima;
+    private int asientosOcupados;
 
     public Zona(ZonaPrecio precio) {
         this.zonaPrecio = precio;
@@ -12,21 +13,34 @@ public class Zona {
 
 
 
-    public boolean isDisponible(Funcion funcion, int cantSolicitada) {
-        return true;
+    public boolean isDisponible(Funcion funcion) {
+        return asientosOcupados < capacidadMaxima;
     }
 
     public void getDisponibleActual(Funcion funcion) {
-        //todavia falta definir logica
+      int disponibles = capacidadMaxima - asientosOcupados;
+      if (disponibles > 0) {
+          System.out.println("Quedan " + disponibles + " lugares disponibles en la zona " + nombre);
+      } else {
+          System.out.println("No quedan lugares disponibles en la zona " + nombre);
+      }
     }
 
     public void reservarLugares(Funcion funcion, int cantidad) {
-        //falta definir logica
-
+      if (asientosOcupados + cantidad <= capacidadMaxima) {
+          asientosOcupados += cantidad;
+          System.out.println(cantidad + " lugares reservados en la zona " + nombre);
+      } else {
+          System.out.println("No hay suficientes lugares disponibles para reservar " + cantidad + " asientos en la zona " + nombre);
+      }
     }
-    public void liberarLugares(Funcion funcion, int cantidad) {
-        //falte definir logica
 
+    public int getCapacidadMaxima() {
+      return capacidadMaxima;
+  }
+
+    public void setCapacidadMaxima(int capacidadMaxima) {
+      this.capacidadMaxima = capacidadMaxima;
     }
 
     public String getNombre() {

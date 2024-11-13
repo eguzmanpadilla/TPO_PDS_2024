@@ -20,12 +20,6 @@ public class Grupo {
       }
     }
 
-    public void addActor(Actor actor) {
-      if (actor != null) {
-        actores.add(actor);
-        actor.setGrupo(this);
-      }
-    }
     public String getNombre() { return nombre; }
 
     public List<Actor> getActores() { return List.copyOf(actores); }
