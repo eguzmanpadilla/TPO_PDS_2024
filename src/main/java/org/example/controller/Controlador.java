@@ -4,7 +4,6 @@ import org.example.model.*;
 import org.example.request.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +16,12 @@ public class Controlador {
     }
 
     public boolean cargarFuncion(FuncionRequest funcionRequest) {
-        return this.teatro.cargarFuncion(funcionRequest.titulo(), funcionRequest.fecha(), funcionRequest.duracionMin(), funcionRequest.grupo());
+        return this.teatro.cargarFuncion(
+                funcionRequest.titulo(),
+                funcionRequest.fecha(),
+                funcionRequest.duracionMin(),
+                getGrupo(funcionRequest.grupo())
+        );
     }
 
     public boolean cargarGrupo(String nombreGrupo, List<ActorRequest> actorRequestList) {
@@ -29,12 +33,18 @@ public class Controlador {
         if(Objects.equals(medioDePago.tipo(), "Credito")) {
             pago = new TarjetaCredito(medioDePago.tipo(), medioDePago.cuotas());
         } else if (Objects.equals(medioDePago.tipo(), "Debito")) {
-            pago = new TarjetaDebito(medioDePago.tipo());
+            pago = new TarjetaDebito(medioDePago.tipo(), medioDePago.cuotas());
         } else if (Objects.equals(medioDePago.tipo(), "Efectivo")) {
-            pago = new Efectivo(medioDePago.tipo());
+            pago = new Efectivo(medioDePago.tipo(), medioDePago.cuotas());
         }
         return this.teatro.getAccountService().getClienteActual().realizarCompra(mapEntradas(entradas), pago);
     }
+
+    public CompraRequest getCompra() {
+        Compra compra = this.teatro.getAccountService().getClienteActual().getCompras().getLast();
+        return mapCompra(compra);
+    }
+
 
     public boolean registrar(String nombre,String apellido, String email, String contraseña) {
         return this.teatro.getAccountService().registrarCliente(nombre, apellido, email, contraseña);
@@ -43,6 +53,18 @@ public class Controlador {
     public boolean iniciarSesion(String email, String contraseña) {
         return this.teatro.getAccountService().iniciarSesion(email, contraseña);
 
+    }
+
+    public String getUsuarioActual() {
+        return this.teatro.getAccountService().getClienteActual().getEmail();
+    }
+
+    public Funcion getFuncion(String titulo) {
+        return this.teatro.getFuncionXTitulo(titulo);
+    }
+    public Grupo getGrupo(String grupo) {return this.teatro.getGrupo(grupo);}
+    public List<String> getGrupos() {
+        return this.teatro.getNombreGrupos();
     }
 
     private Grupo mapGrupo(String nombreGrupo, List<ActorRequest> actorRequestList) {
@@ -83,8 +105,29 @@ public class Controlador {
         return new Asiento(asientoRequest.id_asiento(), new Zona(zona));
     }
 
-    public Funcion getFuncion(String titulo) {
-        return this.teatro.getFuncionXTitulo(titulo);
+
+    private CompraRequest mapCompra(Compra compra) {
+        List<EntradaRequest> entradaRequestList = new ArrayList<>();
+        for(Entrada entrada : compra.getEntradas()) {
+            entradaRequestList.add(
+                    new EntradaRequest(
+                            entrada.funcion().getTitulo(),
+                            entrada.fecha(),
+                            new AsientoRequest(
+                                    entrada.asiento().getId_asiento(),
+                                    entrada.asiento().toString()
+                            )
+                    )
+            );
+        }
+        return new CompraRequest(
+                entradaRequestList,
+                new MedioDePagoRequest(
+                        compra.getMedioDePago().getTipo(),
+                        compra.getMedioDePago().getCantidadCuotas()
+                )
+        );
+
     }
 
 

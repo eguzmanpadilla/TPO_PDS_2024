@@ -1,5 +1,4 @@
 
 m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãò‡Ã8ßó—Š²2
 p	java:S116"URename this field "id_asiento" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èëù-8÷¼–Š²2
-J
-java:S1068".Remove this unused "id_asiento" private field.(Èëù-8ù¼–Š²2
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¨†Äúÿÿÿÿ8ÐÒ¶œ²2

@@ -2,8 +2,8 @@ package org.example.model;
 
 public class Efectivo extends MedioDePago{
 
-    public Efectivo(String tipo) {
-        super(tipo);
+    public Efectivo(String tipo, short cantidadCuotas) {
+        super(tipo, cantidadCuotas);
     }
 
     @Override

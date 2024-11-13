@@ -1,5 +1,5 @@
 
-m	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŸ˜˜8Åã¤š²2
-r	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÿ£úÿÿÿÿ8Æã¤š²2
+m	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŸ˜˜8×±Ã¢²2
+r	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÿ£úÿÿÿÿ8×±Ã¢²2
  
-java:S1862P"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(àó8Èã¤š²2
+java:S1862f"„This branch can not be reached because the condition duplicates a previous condition in the same sequence of "if/else if" statements(àó8Ø±Ã¢²2

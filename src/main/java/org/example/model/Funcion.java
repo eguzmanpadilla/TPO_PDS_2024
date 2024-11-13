@@ -7,12 +7,12 @@ import java.util.List;
 public class Funcion {
 
     private String titulo;
-    private Date fecha;
+    private String fecha;
     private int duracionMin;
     private Grupo grupo;
 
 
-    public Funcion(String titulo, Date fecha, int duracionMin, Grupo grupo) {
+    public Funcion(String titulo, String fecha, int duracionMin, Grupo grupo) {
         this.titulo = titulo;
         this.fecha = fecha;
         this.duracionMin = duracionMin;
@@ -23,7 +23,11 @@ public class Funcion {
         return duracionMin*140;
     }
     public void reservarLugar(Zona zona, int cantidad) {
-        //falta definir logica
+        if (zona.isDisponible(this) && cantidad <= (zona.getCapacidadMaxima() - zona.getAsientosOcupados())) {
+            zona.reservarLugares(this, cantidad);
+        } else {
+            System.out.println("No hay suficientes lugares disponibles en la zona " + zona.getNombre());
+        }
     }
 
 
@@ -31,7 +35,7 @@ public class Funcion {
         return titulo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 }

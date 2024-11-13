@@ -8,7 +8,7 @@ public class AccountService {
 
   private Optional<Cliente> clienteActual;
 
-    String ADMIN_USERNAME = "Admin123";
+    String ADMIN_EMAIL = "admin123@gmail.com";
     String ADMIN_PASSWORD = "1234";
 
     private List<Cliente> clientes;

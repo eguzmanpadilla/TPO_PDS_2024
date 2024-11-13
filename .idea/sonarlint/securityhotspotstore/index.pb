@@ -53,3 +53,9 @@ c
 3src/main/java/org/example/model/AccountService.java,6\2\626a75bbff0b78964b748f68333f68f76d52fbfe
 e
 5src/main/java/org/example/request/AsientoRequest.java,9\e\9edd7b8e0157921dde117f70fe69ffb4a2b216e0
+X
+(src/main/java/org/example/view/View.java,6\a\6a32b0cd56712bec2f6ce79cfcfff94bdb5513a1
+Z
+*src/main/java/org/example/view/Accion.java,a\7\a75caae8aebd98330d532bed2c4301bd08aacc43
+d
+4src/main/java/org/example/request/CompraRequest.java,f\0\f0aa4b803723262df52d5e3218a8124191efc1e2

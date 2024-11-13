@@ -26,7 +26,7 @@ public class Teatro {
         this.asientos = new ArrayList<>();
     }
 
-    public boolean cargarFuncion(String titulo, Date fecha, int duracionMin, Grupo grupo) {
+    public boolean cargarFuncion(String titulo, String fecha, int duracionMin, Grupo grupo) {
         for(Funcion funcion : funciones) {
             if(funcion.getTitulo() == titulo || funcion.getFecha().equals(fecha)) {
                 return false;
@@ -59,8 +59,22 @@ public class Teatro {
         return null;
     }
 
+    public List<String> getNombreGrupos() {
+        List<String> nombres = new ArrayList<>();
+        for(Grupo grupo : grupos) {
+            nombres.add(grupo.getNombre());
+        }
+        return nombres;
+    }
 
-
+    public Grupo getGrupo(String nombre) {
+        for(Grupo grupo : this.grupos) {
+            if(Objects.equals(grupo.getNombre(), nombre)) {
+                return grupo;
+            }
+        }
+        return null;
+    }
 
     public List<Cliente> getClientes() {
         return  this.accountService.getClientes();

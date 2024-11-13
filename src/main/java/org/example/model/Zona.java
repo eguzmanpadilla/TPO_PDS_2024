@@ -8,6 +8,7 @@ public class Zona {
 
     public Zona(ZonaPrecio precio) {
         this.zonaPrecio = precio;
+        this.asientosOcupados = 0;
         this.capacidadMaxima = 0;
     }
 
@@ -41,6 +42,10 @@ public class Zona {
 
     public void setCapacidadMaxima(int capacidadMaxima) {
       this.capacidadMaxima = capacidadMaxima;
+    }
+
+    public int getAsientosOcupados() {
+        return asientosOcupados;
     }
 
     public String getNombre() {

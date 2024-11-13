@@ -5,9 +5,19 @@ import java.util.List;
 public class Compra {
 
     private List<Entrada> entradas;
+    private MedioDePago medioDePago;
 
-    public Compra(List<Entrada> entradas) {
+    public Compra(List<Entrada> entradas, MedioDePago medioDePago) {
         this.entradas = entradas;
+        this.medioDePago = medioDePago;
+    }
+
+    public List<Entrada> getEntradas() {
+        return entradas;
+    }
+
+    public MedioDePago getMedioDePago() {
+        return medioDePago;
     }
 
     public double calcularTotal() {

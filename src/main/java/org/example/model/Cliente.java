@@ -30,7 +30,7 @@ public class Cliente {
     }
 
     public double realizarCompra(List<Entrada> entradas, MedioDePago medioDePago) {
-      Compra compra = new Compra(entradas);
+      Compra compra = new Compra(entradas, medioDePago);
       compras.add(compra);
       System.out.println("Compra realizada por: " + nombre + " " + apellido);
       return medioDePago.calcularMontoFinal(compra.calcularTotal());

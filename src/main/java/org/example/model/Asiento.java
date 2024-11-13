@@ -10,6 +10,10 @@ public class Asiento {
         this.zona = zona;
     }
 
+    public int getId_asiento() {
+        return id_asiento;
+    }
+
     public double getPrecio() {
         return this.zona.getPrecio();
     }
