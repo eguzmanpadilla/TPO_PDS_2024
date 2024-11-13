@@ -46,6 +46,19 @@ public class Teatro {
         return true;
     }
 
+    public AccountService getAccountService() {
+        return this.accountService;
+    }
+
+    public Funcion getFuncionXTitulo(String titulo) {
+        for(Funcion funcion : funciones) {
+            if (funcion.getTitulo() == titulo) {
+                return funcion;
+            }
+        }
+        return null;
+    }
+
 
 
 

@@ -1,6 +1,7 @@
 package org.example.model;
 
 import org.example.request.DataRequest;
+import org.example.request.MedioDePagoRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,10 +28,11 @@ public class Cliente {
       System.out.println("Cliente logueado: " + nombre + " " + apellido);
     }
 
-    public void realizarCompra(List <DataFuncion> funciones, List<LugarSeleccionado> lugares, MedioDePago medioDePago) {
-      Compra compra = new Compra(funciones, lugares, medioDePago);
+    public double realizarCompra(List<Entrada> entradas, MedioDePago medioDePago) {
+      Compra compra = new Compra(entradas);
       compras.add(compra);
       System.out.println("Compra realizada por: " + nombre + " " + apellido);
+      return medioDePago.calcularMontoFinal(compra.calcularTotal());
     }
 
     public String getNombre() {

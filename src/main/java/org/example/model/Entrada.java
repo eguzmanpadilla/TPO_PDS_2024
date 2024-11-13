@@ -1,6 +1,8 @@
 package org.example.model;
 
-public record Entrada(Funcion funcion, Asiento asiento, MedioDePago medioDePago) {
+import java.util.Date;
+
+public record Entrada(Funcion funcion, Date date, Asiento asiento) {
 
 
 }

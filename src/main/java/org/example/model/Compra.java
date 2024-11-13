@@ -14,8 +14,7 @@ public class Compra {
         double total = 0;
         for (Entrada entrada : entradas) {
             double base = entrada.funcion().getPrecioXFuncion() + entrada.asiento().getPrecio();
-            double modif = entrada.medioDePago().calcularMontoFinal(base);
-            total = total + modif;
+            total = total + base;
         }
         return total;
     }

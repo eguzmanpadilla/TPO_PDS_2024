@@ -2,15 +2,15 @@ package org.example.model;
 
 public class Zona {
 
-    private String nombre;
-    private double precio;
+   private ZonaPrecio zonaPrecio;
     private int capacidadMaxima;
 
-    public Zona(String nombre, double precio, int capacidadMaxima) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.capacidadMaxima = capacidadMaxima;
+    public Zona(ZonaPrecio precio) {
+        this.zonaPrecio = precio;
+        this.capacidadMaxima = 0;
     }
+
+
 
     public boolean isDisponible(Funcion funcion, int cantSolicitada) {
         return true;

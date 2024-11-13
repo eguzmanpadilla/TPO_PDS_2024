@@ -1,9 +1,10 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŸ˜˜8¿ô•“²2
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÿ£úÿÿÿÿ8üÛ—“²2
-t	java:S116"YRename this field "ADMIN_USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°˜¤	8Àô•“²2
-z	java:S116"YRename this field "ADMIN_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ›ûúÿÿÿÿ8Àô•“²2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŸ˜˜8”Ë¾•²2
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÿ£úÿÿÿÿ8”Ë¾•²2
+t	java:S116
+"YRename this field "ADMIN_USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°˜¤	8—Ë¾•²2
+z	java:S116"YRename this field "ADMIN_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ›ûúÿÿÿÿ8—Ë¾•²2
 p
-java:S1172"SRemove these unused method parameters "nombre", "apellido", "email", "contraseÃ±a".(ÃŸ˜˜8ãà˜“²2
+java:S1172"SRemove these unused method parameters "nombre", "apellido", "email", "contraseÃ±a".(ÃŸ˜˜8šË¾•²2
 _
-java:S1172"=Remove these unused method parameters "email", "contraseÃ±a".(ëÿ£úÿÿÿÿ8Ì‡š“²2
+java:S1172"=Remove these unused method parameters "email", "contraseÃ±a".(ëÿ£úÿÿÿÿ8›Ë¾•²2
