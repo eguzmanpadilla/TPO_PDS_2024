@@ -17,4 +17,8 @@ public class Asiento {
     public double getPrecio() {
         return this.zona.getPrecio();
     }
+
+    public Zona getZona() {
+        return this.zona;
+    }
 }

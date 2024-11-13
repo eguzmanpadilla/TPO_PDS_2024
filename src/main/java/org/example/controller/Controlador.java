@@ -34,7 +34,7 @@ public class Controlador {
             pago = new TarjetaCredito(medioDePago.tipo(), medioDePago.cuotas());
         } else if (Objects.equals(medioDePago.tipo(), "Debito")) {
             pago = new TarjetaDebito(medioDePago.tipo(), medioDePago.cuotas());
-        } else if (Objects.equals(medioDePago.tipo(), "Efectivo")) {
+        } else {
             pago = new Efectivo(medioDePago.tipo(), medioDePago.cuotas());
         }
         return this.teatro.getAccountService().getClienteActual().realizarCompra(mapEntradas(entradas), pago);
@@ -115,7 +115,7 @@ public class Controlador {
                             entrada.fecha(),
                             new AsientoRequest(
                                     entrada.asiento().getId_asiento(),
-                                    entrada.asiento().toString()
+                                    entrada.asiento().getZona().getNombre().toString()
                             )
                     )
             );

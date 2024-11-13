@@ -4,7 +4,6 @@ import org.example.controller.Controlador;
 import org.example.model.*;
 import org.example.request.*;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -43,6 +42,7 @@ public class Main {
             System.out.println("Inicio de sesión exitoso. Bienvenido, " + controlador.getUsuarioActual());
         } else {
             System.out.println("Email o contraseña incorrectos.");
+            return;
         }
 
         // Crear un grupo y cargarlo
@@ -72,7 +72,7 @@ public class Main {
         System.out.println("=== Cargar Función ===");
         System.out.print("Título de la función: ");
         String tituloFuncion = scanner.nextLine();
-        System.out.println("Ingresa la fecha: ");
+        System.out.print("Ingresa la fecha de la función (formato YYYY-MM-DDTHH:MM): ");
         String fechaFuncion = scanner.nextLine();
         System.out.print("Duración en minutos: ");
         int duracionFuncion = Integer.parseInt(scanner.nextLine());
@@ -82,6 +82,7 @@ public class Main {
             System.out.println("Función cargada exitosamente.");
         } else {
             System.out.println("Error al cargar la función.");
+            return;
         }
 
         // Comprar entradas
@@ -96,7 +97,7 @@ public class Main {
             System.out.print("Zona del asiento (PLATEA, PALCO_ALTO, PALCO_BAJO, CAZUELA, TERTULIA): ");
             String zona = scanner.nextLine();
 
-            System.out.println("Ingresa la fecha: ");
+            System.out.print("Ingresa la fecha de la entrada (formato YYYY-MM-DDTHH:MM): ");
             String fechaEntrada = scanner.nextLine();
 
             AsientoRequest asientoRequest = new AsientoRequest(idAsiento, zona);
@@ -113,6 +114,27 @@ public class Main {
         double totalCompra = controlador.compra(entradas, medioDePago);
         System.out.println("Compra realizada. Total: $" + totalCompra);
 
+        // Obtener y mostrar ticket de compra
+        CompraRequest compraRequest = controlador.getCompra();
+        mostrarTicket(compraRequest);
+
         scanner.close();
+    }
+
+    private static void mostrarTicket(CompraRequest compraRequest) {
+        System.out.println("\n=== Ticket de Compra ===");
+        System.out.println("Medio de Pago: " + compraRequest.medioDePagoRequest().tipo());
+        System.out.println("Cuotas: " + compraRequest.medioDePagoRequest().cuotas());
+
+        System.out.println("Entradas:");
+        for (EntradaRequest entrada : compraRequest.entradas()) {
+            System.out.println("  - Función: " + entrada.funcion());
+            System.out.println("    Fecha: " + entrada.date());
+            System.out.println("    Asiento ID: " + entrada.asientoRequest().id_asiento());
+            System.out.println("    Zona: " + entrada.asientoRequest().zona());
+            System.out.println();
+        }
+
+        System.out.println("=== Fin del Ticket ===");
     }
 }

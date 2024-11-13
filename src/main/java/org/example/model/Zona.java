@@ -11,6 +11,7 @@ public class Zona {
         this.asientosOcupados = 0;
         this.capacidadMaxima = 0;
     }
+    
 
 
 
