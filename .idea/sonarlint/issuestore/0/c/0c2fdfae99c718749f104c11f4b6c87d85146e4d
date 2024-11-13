@@ -1,5 +1,13 @@
 
-d
-java:S1172"BRemove these unused method parameters "funcion", "cantSolicitada".(˜ÆˆÕùÿÿÿÿ8ø³‘•²2
 K
-java:S1068".Remove this unused "zonaPrecio" private field.(‡öÙ§8ú³‘•²2
+java:S1172".Remove this unused method parameter "funcion".(•Áßç8ƒˆ™š²2
+K
+java:S1172".Remove this unused method parameter "funcion".(îì¹¢8„ˆ™š²2
+L	java:S106"+Replace this use of System.out by a logger.(ô¦Õ«ûÿÿÿÿ8‡ˆ™š²2
+G	java:S106"+Replace this use of System.out by a logger.(úÓ·8ˆˆ™š²2
+P
+java:S1172".Remove this unused method parameter "funcion".(ª‚Îáøÿÿÿÿ8ˆˆ™š²2
+G	java:S106 "+Replace this use of System.out by a logger.(øÁ¦8‰ˆ™š²2
+G	java:S106""+Replace this use of System.out by a logger.(é«Ä¼8‰ˆ™š²2
+K
+java:S1068".Remove this unused "zonaPrecio" private field.(‡öÙ§8Œˆ™š²2
