@@ -46,9 +46,6 @@ public class Teatro {
         return true;
     }
 
-
-
-
     public List<Cliente> getClientes() {
         return  this.accountService.getClientes();
     }
