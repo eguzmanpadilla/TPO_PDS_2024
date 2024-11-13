@@ -6,7 +6,7 @@ import org.example.model.MedioDePago;
 
 import java.util.Date;
 
-public record EntradaRequest(String funcion, Date date, AsientoRequest asientoRequest) {
+public record EntradaRequest(String funcion, String date, AsientoRequest asientoRequest) {
 
 
 }
