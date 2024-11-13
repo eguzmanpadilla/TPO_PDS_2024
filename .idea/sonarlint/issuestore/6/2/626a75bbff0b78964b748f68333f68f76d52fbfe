@@ -1,0 +1,15 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öûòÿÿÿÿÿ8šä¤š²2
+r	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÿ£úÿÿÿÿ8šä¤š²2
+t	java:S116"YRename this field "ADMIN_USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°˜¤	8ä¤š²2
+z	java:S116"YRename this field "ADMIN_PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÈ›ûúÿÿÿÿ8ä¤š²2
+L	java:S106"+Replace this use of System.out by a logger.(îß×øÿÿÿÿ8 ä¤š²2
+L	java:S106"+Replace this use of System.out by a logger.(Óœ±Øùÿÿÿÿ8 ä¤š²2
+c
+java:S1854$"ARemove this useless assignment to local variable "clienteActual".(­“°òùÿÿÿÿ8¡ä¤š²2
+b
+java:S1117$"@Rename "clienteActual" which hides the field declared at line 9.(­“°òùÿÿÿÿ8¢ä¤š²2
+T
+java:S1481$"2Remove this unused "clienteActual" local variable.(­“°òùÿÿÿÿ8¢ä¤š²2
+G	java:S106("+Replace this use of System.out by a logger.(Šõí¹8£ä¤š²2
+G	java:S106,"+Replace this use of System.out by a logger.(õÇÖÑ8£ä¤š²2

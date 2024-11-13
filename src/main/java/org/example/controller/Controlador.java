@@ -37,7 +37,7 @@ public class Controlador {
     }
 
     public boolean registrar(String nombre,String apellido, String email, String contraseña) {
-        return this.teatro.getAccountService().registrar(nombre, apellido, email, contraseña);
+        return this.teatro.getAccountService().registrarCliente(nombre, apellido, email, contraseña);
     }
 
     public boolean iniciarSesion(String email, String contraseña) {

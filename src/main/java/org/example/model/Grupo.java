@@ -28,18 +28,6 @@ public class Grupo {
       throw new UnsupportedOperationException("No implementado");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public List<Actor> getActores() {
-        return List.copyOf(actores);
-    }
-
     public void setActores(List<Actor> actores) {
         this.actores = actores;
     }

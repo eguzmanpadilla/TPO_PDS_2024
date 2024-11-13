@@ -11,35 +11,33 @@ public class Actor {
         this.apellido = apellido;
     }
 
-	public Grupo getGrupo() {
-		return grupo;
-	}
+    public Grupo getGrupo() {
+        return grupo;
+    }
 
-	public void setGrupo(Grupo grupo) {
-		this.grupo = grupo;
-	}
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
 
-	public String getNombre() {
-		return nombre;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public String getApellido() {
-		return apellido;
-	}
+    public String getApellido() {
+        return apellido;
+    }
 
-	public String getNombreCompleto() {
-		return nombre + " " + apellido;
-	}
+    public String getNombreCompleto() {
+        return nombre + " " + apellido;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Actor actor = (Actor) o;
+        return Objects.equals(nombre, actor.nombre) && Objects.equals(apellido, actor.apellido);
+    }
 
 
-  public record Actor(String nombre, String apellido) {
-
-      @Override
-      public boolean equals(Object o) {
-          if (this == o) return true;
-          if (o == null || getClass() != o.getClass()) return false;
-          Actor actor = (Actor) o;
-          return Objects.equals(nombre, actor.nombre) && Objects.equals(apellido, actor.apellido);
-      }
-  }
 }

@@ -20,18 +20,18 @@ public class Zona {
     public void getDisponibleActual(Funcion funcion) {
       int disponibles = capacidadMaxima - asientosOcupados;
       if (disponibles > 0) {
-          System.out.println("Quedan " + disponibles + " lugares disponibles en la zona " + nombre);
+          System.out.println("Quedan " + disponibles + " lugares disponibles en la zona " + zonaPrecio.toString());
       } else {
-          System.out.println("No quedan lugares disponibles en la zona " + nombre);
+          System.out.println("No quedan lugares disponibles en la zona " + zonaPrecio.name());
       }
     }
 
     public void reservarLugares(Funcion funcion, int cantidad) {
       if (asientosOcupados + cantidad <= capacidadMaxima) {
           asientosOcupados += cantidad;
-          System.out.println(cantidad + " lugares reservados en la zona " + nombre);
+          System.out.println(cantidad + " lugares reservados en la zona " + zonaPrecio.name());
       } else {
-          System.out.println("No hay suficientes lugares disponibles para reservar " + cantidad + " asientos en la zona " + nombre);
+          System.out.println("No hay suficientes lugares disponibles para reservar " + cantidad + " asientos en la zona " + zonaPrecio.name());
       }
     }
 
@@ -44,14 +44,10 @@ public class Zona {
     }
 
     public String getNombre() {
-        return nombre;
+        return zonaPrecio.name();
     }
 
     public double getPrecio() {
-        return precio;
-    }
-
-    public int getCapacidadMaxima() {
-        return capacidadMaxima;
+        return zonaPrecio.getPrecio();
     }
 }

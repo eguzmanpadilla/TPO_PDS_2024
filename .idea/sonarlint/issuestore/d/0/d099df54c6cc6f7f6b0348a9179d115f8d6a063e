@@ -1,0 +1,7 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åçÿıÿÿÿÿ8„ä¤š²2
+w	java:S116"VRename this field "contraseÃ±a" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëôŒ¦ÿÿÿÿÿ8ˆä¤š²2
+L	java:S106"+Replace this use of System.out by a logger.(Œ°şÌşÿÿÿÿ8‹ä¤š²2
+L	java:S106"+Replace this use of System.out by a logger.(ĞõĞŒùÿÿÿÿ8‹ä¤š²2
+G	java:S106#"+Replace this use of System.out by a logger.(¸ø¦8Œä¤š²2
+j	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú—’8ä¤š²2
